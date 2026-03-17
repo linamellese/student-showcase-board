@@ -1,0 +1,169 @@
+.footer {
+  background-color: #111827;
+  color: white;
+  margin-top: auto;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+/* Base styles for mobile - using flexbox */
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Tablet styles */
+@media (min-width: 640px) {
+  .container {
+    padding: 3rem 1.5rem;
+  }
+  
+  .grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  /* Make each section take up roughly half the width on tablet */
+  .brandSection,
+  .linksSection {
+    flex: 1 1 calc(50% - 1rem);
+    min-width: 250px;
+  }
+}
+
+/* Desktop styles - horizontal layout */
+@media (min-width: 1024px) {
+  .container {
+    padding: 3rem 2rem;
+  }
+  
+  .grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+  
+  /* Brand section takes more space on desktop */
+  .brandSection {
+    flex: 2;
+  }
+  
+  .linksSection {
+    flex: 1;
+  }
+}
+
+/* Large desktop - even more spacing */
+@media (min-width: 1280px) {
+  .grid {
+    gap: 4rem;
+  }
+}
+
+.brandSection {
+  /* Base styles */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #60a5fa, #bfdbfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.description {
+  color: #9ca3af;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  max-width: 400px; /* Prevents text from becoming too wide */
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialLink {
+  color: #9ca3af;
+  transition: color 0.2s;
+}
+
+.socialLink:hover {
+  color: white;
+}
+
+.sectionTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footerLink {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: inline-block;
+  padding: 0.25rem 0;
+}
+
+.footerLink:hover {
+  color: white;
+}
+
+.copyright {
+  border-top: 1px solid #1f2937;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  text-align: center;
+  color: #9ca3af;
+}
+
+.madeWith {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.heartIcon {
+  color: #ef4444;
+  animation: pulse 1.5s ease infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.copyrightText {
+  margin: 0;
+  font-size: 0.875rem;
+}
